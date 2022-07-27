@@ -1,7 +1,7 @@
 import React from 'react'
 
 const HomePage = (props) => {
-  
+    // console.log(props.userList)
     return (
     <>
         <p>{props.clientMessage}</p>

@@ -103,6 +103,7 @@
   - Deploy your server code:
     - git push heroku main
   - If everything worked, Student B should now have a Heroku url for the hosted server. Send that url to Student A.
+  - sample https://deploybackend1.herokuapp.com
 - For Student A:
   - Create a new Heroku remote host for the client:
     - heroku create -a deployfrontend
@@ -115,7 +116,6 @@
   - Deploy your client code:
     - git push heroku main
 - If everything has been set up correctly, you should be able to type a message on the client home page, press the Send button, and see the server response message with two date timestamps.
-
 
 ## Approach (Collaborative Features) day 2 ```````````````````
 
@@ -249,4 +249,3 @@
     - For requesting the end of the file
   - heroku logs --tail -n 500
     - Combined command
-

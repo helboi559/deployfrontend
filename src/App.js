@@ -2,10 +2,10 @@ import './App.css';
 import {Routes,Route} from 'react-router-dom'
 import HomePage from './Pages/HomePage';
 import PostUser from "./Pages/PostUser";
-import {useState} from "react"
 import {useState, useEffect} from "react"
 
-
+//http://localhost:4000
+//https://deploybackend1.herokuapp.com
 const urlEndpoint=process.env.REACT_APP_URL_ENDPOINT
 function App() {
   const [clientMessage,setClientMessage] = useState('')
@@ -17,7 +17,7 @@ function App() {
       const url = `${urlEndpoint}/get-users`
       const res = await fetch(url)
       const responseJSON = await res.json()
-      // console.log(responseJSON)
+      console.log(responseJSON)
       
       setUserList(responseJSON)
       return responseJSON
@@ -54,7 +54,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Routes>
-         <Route index element={<HomePage clientMessage={clientMessage} setClientMessage={setClientMessage} serverMessage={serverMessage} sendReceiveMessage={sendReceiveMessage} />} />
+         
          <Route
             path="/post-user"
             element={<PostUser postUserData={postUserData} />}
