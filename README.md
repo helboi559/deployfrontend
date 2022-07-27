@@ -116,6 +116,7 @@
     - git push heroku main
 - If everything has been set up correctly, you should be able to type a message on the client home page, press the Send button, and see the server response message with two date timestamps.
 
+
 ## Approach (Collaborative Features) day 2 ```````````````````
 
 - For this part of the assignment, the goal will be for both students A and B to implement fullstack features in parallel with each other (at the same time, but not interfering with one another). 
@@ -248,3 +249,4 @@
     - For requesting the end of the file
   - heroku logs --tail -n 500
     - Combined command
+
