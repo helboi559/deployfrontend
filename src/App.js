@@ -3,6 +3,7 @@ import {Routes,Route} from 'react-router-dom'
 import HomePage from './Pages/HomePage';
 import {useState, useEffect} from "react"
 
+
 const urlEndpoint=process.env.REACT_APP_URL_ENDPOINT
 function App() {
   const [clientMessage,setClientMessage] = useState('')
@@ -11,16 +12,9 @@ function App() {
   useEffect(() => {
     const fetchUserList = async () => {
       const url = `${urlEndpoint}/get-users`
-      const res = await fetch(url, {
-        method:"GET",
-        headers: {
-          "Content-Type": 'application/json'
-        }
-      })
-      // const res = await fetch(url)
-      // console.log(res)
+      const res = await fetch(url)
       const responseJSON = await res.json()
-      console.log(responseJSON)
+      // console.log(responseJSON)
       
       setUserList(responseJSON)
       return responseJSON

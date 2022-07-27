@@ -18,7 +18,9 @@ const HomePage = (props) => {
             {props.userList.map((user) => {
                 return (
                     <> 
-                        <p>{user.id}</p>
+                        <p>{user.firstName}</p>
+                        <p>{user.lastName}</p>
+                        <p>{user.email}</p>
                     </>
                 )
             })}
