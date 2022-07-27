@@ -1,8 +1,9 @@
 import React from 'react'
 
 const HomePage = (props) => {
-  return (
-    <div>
+  
+    return (
+    <>
         <p>{props.clientMessage}</p>
         <p>{props.serverMessage}</p>
         <input type="text" onChange={(e)=> {
@@ -13,7 +14,16 @@ const HomePage = (props) => {
         <button onClick={()=> {
             props.sendReceiveMessage()
         }}>Send</button>
-    </div>
+        <>
+            {props.userList.map((user) => {
+                return (
+                    <> 
+                        <p>{user.id}</p>
+                    </>
+                )
+            })}
+        </>
+    </>
   )
 }
 
